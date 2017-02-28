@@ -1,0 +1,2 @@
+class TbComentario < ApplicationRecord
+end

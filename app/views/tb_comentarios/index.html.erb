@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tb Comentarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo comentario</th>
+      <th>Codigo</th>
+      <th>Descripcion</th>
+      <th>Codigo usuario</th>
+      <th>Codigo usuario web</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tb_comentarios.each do |tb_comentario| %>
+      <tr>
+        <td><%= tb_comentario.tipo_comentario %></td>
+        <td><%= tb_comentario.codigo %></td>
+        <td><%= tb_comentario.descripcion %></td>
+        <td><%= tb_comentario.codigo_usuario %></td>
+        <td><%= tb_comentario.codigo_usuario_web %></td>
+        <td><%= link_to 'Show', tb_comentario %></td>
+        <td><%= link_to 'Edit', edit_tb_comentario_path(tb_comentario) %></td>
+        <td><%= link_to 'Destroy', tb_comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tb Comentario', new_tb_comentario_path %>

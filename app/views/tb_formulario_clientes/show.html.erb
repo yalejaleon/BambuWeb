@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tb_formulario_cliente.codigo %>
+</p>
+
+<p>
+  <strong>Codigo cliente:</strong>
+  <%= @tb_formulario_cliente.codigo_cliente %>
+</p>
+
+<p>
+  <strong>Codigo formulario:</strong>
+  <%= @tb_formulario_cliente.codigo_formulario %>
+</p>
+
+<%= link_to 'Edit', edit_tb_formulario_cliente_path(@tb_formulario_cliente) %> |
+<%= link_to 'Back', tb_formulario_clientes_path %>

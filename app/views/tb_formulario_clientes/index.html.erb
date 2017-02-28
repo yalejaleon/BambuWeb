@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tb Formulario Clientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Codigo cliente</th>
+      <th>Codigo formulario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tb_formulario_clientes.each do |tb_formulario_cliente| %>
+      <tr>
+        <td><%= tb_formulario_cliente.codigo %></td>
+        <td><%= tb_formulario_cliente.codigo_cliente %></td>
+        <td><%= tb_formulario_cliente.codigo_formulario %></td>
+        <td><%= link_to 'Show', tb_formulario_cliente %></td>
+        <td><%= link_to 'Edit', edit_tb_formulario_cliente_path(tb_formulario_cliente) %></td>
+        <td><%= link_to 'Destroy', tb_formulario_cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tb Formulario Cliente', new_tb_formulario_cliente_path %>

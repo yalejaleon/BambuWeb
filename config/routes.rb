@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'nosotros/index'
+
+  get 'paquetes/index'
+
+  get 'servicios/index'
+
+  resources :tb_comentarios
+  resources :tb_formulario_clientes
   resources :tb_servicios
   resources :tb_cita
   resources :tb_detalle_solicituds

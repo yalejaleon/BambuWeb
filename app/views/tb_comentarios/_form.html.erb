@@ -1,0 +1,42 @@
+<%= form_for(tb_comentario) do |f| %>
+  <% if tb_comentario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_comentario.errors.count, "error") %> prohibited this tb_comentario from being saved:</h2>
+
+      <ul>
+      <% tb_comentario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo_comentario %>
+    <%= f.text_field :tipo_comentario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripcion %>
+    <%= f.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_usuario %>
+    <%= f.text_field :codigo_usuario %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_usuario_web %>
+    <%= f.text_field :codigo_usuario_web %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

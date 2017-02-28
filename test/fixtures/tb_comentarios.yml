@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo_comentario: MyString
+  codigo: MyString
+  descripcion: MyString
+  codigo_usuario: MyString
+  codigo_usuario_web: MyString
+
+two:
+  tipo_comentario: MyString
+  codigo: MyString
+  descripcion: MyString
+  codigo_usuario: MyString
+  codigo_usuario_web: MyString

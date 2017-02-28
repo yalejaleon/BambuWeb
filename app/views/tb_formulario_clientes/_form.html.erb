@@ -1,0 +1,32 @@
+<%= form_for(tb_formulario_cliente) do |f| %>
+  <% if tb_formulario_cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_formulario_cliente.errors.count, "error") %> prohibited this tb_formulario_cliente from being saved:</h2>
+
+      <ul>
+      <% tb_formulario_cliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_cliente %>
+    <%= f.text_field :codigo_cliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_formulario %>
+    <%= f.text_field :codigo_formulario %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

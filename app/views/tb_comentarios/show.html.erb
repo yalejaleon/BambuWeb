@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo comentario:</strong>
+  <%= @tb_comentario.tipo_comentario %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tb_comentario.codigo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tb_comentario.descripcion %>
+</p>
+
+<p>
+  <strong>Codigo usuario:</strong>
+  <%= @tb_comentario.codigo_usuario %>
+</p>
+
+<p>
+  <strong>Codigo usuario web:</strong>
+  <%= @tb_comentario.codigo_usuario_web %>
+</p>
+
+<%= link_to 'Edit', edit_tb_comentario_path(@tb_comentario) %> |
+<%= link_to 'Back', tb_comentarios_path %>
