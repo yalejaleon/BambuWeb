@@ -1,0 +1,81 @@
+   <section id="team" class="team">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="row m-b-lg">
+                    <div class="col-lg-12 text-center">
+                        <div class="navy-line"></div>
+                        <h1>Nosotros</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                     <%= image_tag "nosotros.png"%>
+                        <div>
+                            <p class="lead">SPINETTI SPA GYM fue creada con la finalidad de prestar servicios simples que van desde un masaje facial, un masaje corporal a una gama de servicios de un día o medio día de duración que incluyen tratamientos faciales, tratamientos corporales, tratamientos de belleza, baños de Sauna o Vapor, capilares, tratamientos de salud y bienestar.</p>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <div class="team-member">
+                    <h4><span class="navy">Visión</span></h4>
+                    <p> 
+                    Ser una entidad con una cultura de Calidad contribuyendo con la preservación de la vida, otorgando bienestar, relajación física y mental que permitan a nuestros clientes enfrentar los males de la modernidad, con técnicas especiales para su salud; y por tanto Posicionarnos como empresa líder en el ramo, siendo reconocida a nivel local, nacional e internacional por la calidad en el servicio.</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="team-member wow fadeInRight">
+                    <h4><span class="navy">Misión</span></h4>
+                    <p>Somos una empresa dedicada a ofrecer servicios estéticos integrales que lleven a nuestros clientes a experimentar niveles únicos de relajación, manteniendo una armonía de mente-cuerpo, y a la vez mejorar su bienestar con tratamientos de salud y belleza, así como la implementación de técnicas que conlleven a la creación de un  hábito de cultura física para mantenerla salud corporal, todo esto de la mano del servicio de profesionales capacitados de máxima calidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="timeline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Objetivos de Spinetti Spa Gim</h1>
+            </div>
+        </div>
+        <div class="row features-block">
+
+            <div class="col-lg-12">
+                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+              
+                      <script type="text/javascript">
+
+
+                        var j=1;
+                   for (var i = 0; i < 3; i++) {
+
+                            if (j == 1){
+                                document.write("<div class=\"vertical-timeline-block\"><div class=\"vertical-timeline-icon navy-bg\"><i class=\"fa fa-bullseye\"></i></div><div class=\"vertical-timeline-content wow fadeInRight\"><p>Garantizar una atención programada y controlada de los servicios ofrecidos en SPINNETI SPA GYM para el disfrute de los clientes.</p></div></div>");
+                                j=j+1;}
+                            else {
+                                document.write("<div class=\"vertical-timeline-block\"><div class=\"vertical-timeline-icon navy-bg\"><i class=\"fa fa-bullseye\"></i></div><div class=\"vertical-timeline-content wow fadeInRight\"><p>Conocer las distintas necesidades de los clientes para orientar los servicios que ofrece SPINETTI SPA GYM y así garantizar una excelente atención.</p></div></div>");
+                              j=j-1;}
+                            
+
+                      }
+
+                </script>
+
+                    
+
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<%= render '/partials/footer' %>

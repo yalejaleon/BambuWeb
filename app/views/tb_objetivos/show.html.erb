@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tb_objetivo.codigo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tb_objetivo.descripcion %>
+</p>
+
+<p>
+  <strong>Tipo objetivo:</strong>
+  <%= @tb_objetivo.tipo_objetivo %>
+</p>
+
+<p>
+  <strong>Codigo organizacion:</strong>
+  <%= @tb_objetivo.codigo_organizacion %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tb_objetivo.status %>
+</p>
+
+<%= link_to 'Edit', edit_tb_objetivo_path(@tb_objetivo) %> |
+<%= link_to 'Back', tb_objetivos_path %>

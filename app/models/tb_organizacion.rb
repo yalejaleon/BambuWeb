@@ -1,0 +1,2 @@
+class TbOrganizacion < ApplicationRecord
+end

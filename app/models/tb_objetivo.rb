@@ -1,0 +1,2 @@
+class TbObjetivo < ApplicationRecord
+end

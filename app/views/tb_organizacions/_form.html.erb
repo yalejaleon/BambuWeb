@@ -1,0 +1,52 @@
+<%= form_for(tb_organizacion) do |f| %>
+  <% if tb_organizacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_organizacion.errors.count, "error") %> prohibited this tb_organizacion from being saved:</h2>
+
+      <ul>
+      <% tb_organizacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rif %>
+    <%= f.text_field :rif %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direccion %>
+    <%= f.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mision %>
+    <%= f.text_field :mision %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vision %>
+    <%= f.text_field :vision %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rif:</strong>
+  <%= @tb_organizacion.rif %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tb_organizacion.nombre %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @tb_organizacion.correo %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @tb_organizacion.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @tb_organizacion.telefono %>
+</p>
+
+<p>
+  <strong>Mision:</strong>
+  <%= @tb_organizacion.mision %>
+</p>
+
+<p>
+  <strong>Vision:</strong>
+  <%= @tb_organizacion.vision %>
+</p>
+
+<%= link_to 'Edit', edit_tb_organizacion_path(@tb_organizacion) %> |
+<%= link_to 'Back', tb_organizacions_path %>

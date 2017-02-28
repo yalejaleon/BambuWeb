@@ -10,7 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+//= require jquery-3.1.1.min.js
+//= require bootstrap.min.js
+//= require bootstrap-datepicker.js
+//= require jasny-bootstrap.min.js
+//= require footer2.js
+//= requiere jquery.steps.min.js
+//= require jquery.validate.min.js
+//= require citas.js
+//= require material-kit.js
+//= require nouislider.min.js
+//= require jquery.bootstrap-duallistbox.js
+

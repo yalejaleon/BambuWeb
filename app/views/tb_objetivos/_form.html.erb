@@ -1,0 +1,42 @@
+<%= form_for(tb_objetivo) do |f| %>
+  <% if tb_objetivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_objetivo.errors.count, "error") %> prohibited this tb_objetivo from being saved:</h2>
+
+      <ul>
+      <% tb_objetivo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripcion %>
+    <%= f.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo_objetivo %>
+    <%= f.text_field :tipo_objetivo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_organizacion %>
+    <%= f.text_field :codigo_organizacion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
