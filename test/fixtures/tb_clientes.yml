@@ -5,7 +5,6 @@ one:
   nombre: MyString
   apellido: MyString
   correo: MyString
-  codigo_ciudad: MyString
   telefono: MyString
 
 two:
@@ -13,5 +12,4 @@ two:
   nombre: MyString
   apellido: MyString
   correo: MyString
-  codigo_ciudad: MyString
   telefono: MyString
