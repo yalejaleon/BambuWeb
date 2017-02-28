@@ -2,26 +2,26 @@ default: &default
    adapter: postgresql
    database: bambu
    username: postgres
-   password: 12345
+   password: 123
    host: localhost
 
 development:
    adapter: postgresql
    database: bambu
    username: postgres
-   password: 12345
+   password: 123
    host: localhost
 
 test:
    adapter: postgresql
    database: bambu
    username: postgres
-   password: 12345
+   password: 123
    host: localhost
    
 production:
    adapter: postgresql
    database: bambu
    username: postgres
-   password: 12345
+   password: 123
    host: localhost
