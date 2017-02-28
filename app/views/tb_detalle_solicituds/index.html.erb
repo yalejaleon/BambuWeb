@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tb Detalle Solicituds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tb_detalle_solicituds.each do |tb_detalle_solicitud| %>
+      <tr>
+        <td><%= link_to 'Show', tb_detalle_solicitud %></td>
+        <td><%= link_to 'Edit', edit_tb_detalle_solicitud_path(tb_detalle_solicitud) %></td>
+        <td><%= link_to 'Destroy', tb_detalle_solicitud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tb Detalle Solicitud', new_tb_detalle_solicitud_path %>

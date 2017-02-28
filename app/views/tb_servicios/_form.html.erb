@@ -1,0 +1,17 @@
+<%= form_for(tb_servicio) do |f| %>
+  <% if tb_servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_servicio.errors.count, "error") %> prohibited this tb_servicio from being saved:</h2>
+
+      <ul>
+      <% tb_servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

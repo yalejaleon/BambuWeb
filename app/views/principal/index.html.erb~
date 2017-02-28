@@ -1,0 +1,243 @@
+<style type="text/css">
+        .scrollWrapper   {
+        	 text-align:center;
+            width:800px;height:200px;
+            overflow:hidden;
+            border-radius:2px solid #03a9f4;
+            font-family:Arial;font-size:0.8em;
+        }
+        .scrollTitle {
+            background-color:#B5BC65;
+            color:#fff;
+            padding:9px;
+            font-weight:bold;
+            text-align:center;
+        }
+        #scroll    {
+            position:relative;
+            width:auto;
+            margin:1px;
+            z-index: -1;
+            padding:5px;
+        }
+        #scroll .title  {font-weight:bold}
+    </style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag "slider6.png"%>
+      <div class="carousel-caption pull-right">
+                    <h1>Agotado?<br/>
+                        tenemos lo que<br/>
+                        buscabas<br/>
+                        Dias de SPA</h1>
+                    <p>Promocion</p>
+                    <p>
+                        <a class="btn btn-lg btn-success"  role="button">Ver Mas</a>
+                    </p>
+                </div>
+    </div>
+
+    <div class="item">
+    
+     <%= image_tag "slider10.png"%>
+                <div class="carousel-caption pull-right">
+                    <h1>Agotado?<br/>
+                        tenemos lo que<br/>
+                        buscabas<br/>
+                        Dias de SPA</h1>
+                    <p>Promocion</p>
+                    <p>
+                        <a class="btn btn-lg btn-success"  role="button">Ver Mas</a>
+                    </p>
+                </div>
+         
+     
+    </div>
+
+    <div class="item">
+      <%= image_tag "slider7.png"%>
+      <div class="carousel-caption pull-right">
+                     <h1>Agotado?<br/>
+                        tenemos lo que<br/>
+                        buscabas<br/>
+                        Dias de SPA</h1>
+                    <p>Promocion</p>
+                    <p>
+                        <a class="btn btn-lg btn-success"  role="button">Ver Mas</a>
+                    </p>
+                </div>
+    </div>
+
+    <div class="item">
+      <%= image_tag "slider8.png"%>
+      <div class="carousel-caption pull-right">
+                    <h1>Agotado?<br/>
+                        tenemos lo que<br/>
+                        buscabas<br/>
+                        Dias de SPA</h1>
+                    <p>Promocion</p>
+                    <p>
+                        <a class="btn btn-lg btn-success"  role="button">Ver Mas</a>
+                    </p>
+                </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+										<i class="material-icons">keyboard_arrow_left</i>
+									</a>
+									<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+										<i class="material-icons">keyboard_arrow_right</i>
+									</a>
+</div>
+
+<section class="section" style="height: 400px; background:#917470; color: #FFFFFF "> 
+    <div class="col-sm-12">
+     <div class="col-sm-12 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="600ms">      
+            <h2>¿Que es la Consulta Diagnostico?</h2>
+                <p class="r1">La Consulta Diagnostico es el primer servicio que ofrece Spinetti Spa gym, y es el unico requisito para poder optar por cualquiera de nuestros tratamientos, debido a que por medio de esta consulta podemos determinar cuales tratamientos son aptos para usted y asi garantizarle una atención personalizada basada en sus necesidades y preferencias</p>
+                <div class="wow fadeInLeft" data-wow-duration="3000ms" data-wow-delay="600ms">
+                     <h1 class="col-sm-8 primera">¿Es tu Primera Vez?</h1>
+                    <h3 class="col-sm-8">Reserva Online</h3>
+               
+                <p class="right col-sm-4">
+                    <a class="btn btn-success reserva" href="reserva.html" role="button">¡Reservación!</a>
+                </p>
+                </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+    </section>
+	
+<br>
+ 			<div class="tim-typo">
+	                        <span class="tim-note"><%= image_tag "Reserva.png", size: "300x150" %></span>
+	                        <blockquote>
+	                         <p>
+	                         
+                
+                <div class="testimonials-text">
+                     <small>
+	                         forma parte de nosotros y ayudanos a seguir mejorando <i class="fa fa-comment big-icon fa-5x"></i>
+	                 </small>
+
+                </div>
+                
+                   <a class="btn btn-success reserva2" href="reserva.html" role="button">Llenar Encuesta</a>
+                
+	                         </p>
+	                        
+	                        </blockquote>
+	         </div>
+<hr>
+<br>
+<div class="row">
+						
+						<div class="col-md-7 col-sm-offset-1 ">
+	                        <div class="scrollWrapper" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current">
+    							<div class="scrollTitle">Cartelera Informativa</div>
+    							<div id="scroll" >
+ 
+       							 <div class="title">IMPORTANTE</div>
+      							  <div class="content">Por motivos de corte electrico, hoy no estaremos trabajando,las citas seran reprogramadas para el dia de mañana.
+       							 </div>
+ 									 <small>12/04/2017</small>
+
+     							   <div class="title">AVISO</div>
+     							   <div class="content">Por decreto de locura del presidente, mañana no se estara laborando</a>
+     							   </div>
+ 									<small>12/04/2017</small>
+							
+       							 <div class="title">AVISO</div>
+       							 <div class="content">Solo se trabajara medio dia</a>
+       							 </div>
+      							  <small>12/04/2017</small>
+ 
+    </div>
+	                    </div>
+	                    </div>
+
+						<div class="col-md-4 ">
+	                     <%= image_tag "teruel.png"%>
+							
+	                    </div>
+
+	                    
+	                </div>
+	                </div>
+
+
+    <%= render "/partials/footer" %>
+
+ <script type="text/javascript">
+        // determina el numero de pixeles que se moveran las noticias para
+        // cada iteracion en milisegundos de "speedjump"
+        var scrollspeed=1;
+        // determina la velocidad en milisgundos
+        var speedjump=30;
+        // segundos antes de empezar el movimiento
+        var startdelay= 1;
+        // posicion inicial superior en pixeles para cuando inicia
+        var topspace=-10;
+        // altura del marco donde se mostraran las noticias
+        // Si se modifica la altura del contenedor de las noticas hay que
+        // modificar tambien este valor
+        var frameheight=270;
+ 
+        // variable temporal que variara su valor en función de si estan las
+        // noticias en movimiento o paradas
+        current=scrollspeed;
+ 
+        /**
+         * Inicio del scroll
+         * Esta función es llamada en el body de la pagina.
+         * Tiene que recibir el id del scroll
+         */
+        function scrollStart()
+        {
+            dataobj = document.getElementById("scroll");
+            // cogemos la altura maxima de la capa de las noticias
+            alturaNoticias = dataobj.offsetHeight;
+            // posicionamos la capa del scroll en su posicion inicial
+            dataobj.style.top = topspace + 'px';
+ 
+            setTimeout("scrolling()", (startdelay * 1000));
+        }
+ 
+        /**
+         * Funcion que realiza el movimiento
+         */
+        function scrolling() {
+            // Restamos a la propiedad top de la capa el valor en pixeles
+            // establecido en la variable "scrollspeed", para hacer el
+            // movimiento hacia arriba.
+            dataobj.style.top = parseInt(dataobj.style.top) - scrollspeed + 'px';
+            // Si la capa ha sobrepasado la altura del area por donde se muestran
+            // las noticias ("alturaNoticias")
+            if (parseInt(dataobj.style.top) < alturaNoticias * (-1))
+            {
+                // Posicionamos la capa en la parte inferior del recuadro, para
+                // que simule que vienen las noticias de la parte inferior
+                dataobj.style.top = frameheight + 'px';
+                setTimeout("scrolling()", 0);
+            }else{
+                setTimeout("scrolling()", speedjump);
+            }
+        }
+    </script>
+
+

@@ -1,0 +1,2 @@
+class TbSolicitud < ApplicationRecord
+end

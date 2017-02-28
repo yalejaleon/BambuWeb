@@ -1,0 +1,2 @@
+class TbCliente < ApplicationRecord
+end

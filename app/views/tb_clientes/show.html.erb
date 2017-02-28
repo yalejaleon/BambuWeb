@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @tb_cliente.cedula %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tb_cliente.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @tb_cliente.apellido %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @tb_cliente.correo %>
+</p>
+
+<p>
+  <strong>Codigo ciudad:</strong>
+  <%= @tb_cliente.codigo_ciudad %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @tb_cliente.telefono %>
+</p>
+
+<%= link_to 'Edit', edit_tb_cliente_path(@tb_cliente) %> |
+<%= link_to 'Back', tb_clientes_path %>

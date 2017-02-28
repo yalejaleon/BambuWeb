@@ -1,0 +1,47 @@
+<%= form_for(tb_cliente) do |f| %>
+  <% if tb_cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_cliente.errors.count, "error") %> prohibited this tb_cliente from being saved:</h2>
+
+      <ul>
+      <% tb_cliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cedula %>
+    <%= f.text_field :cedula %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :apellido %>
+    <%= f.text_field :apellido %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo_ciudad %>
+    <%= f.text_field :codigo_ciudad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.text_field :telefono %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

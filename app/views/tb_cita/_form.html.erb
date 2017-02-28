@@ -1,0 +1,17 @@
+<%= form_for(tb_citum) do |f| %>
+  <% if tb_citum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tb_citum.errors.count, "error") %> prohibited this tb_citum from being saved:</h2>
+
+      <ul>
+      <% tb_citum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

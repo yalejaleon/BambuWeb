@@ -1,0 +1,2 @@
+class TbServicio < ApplicationRecord
+end

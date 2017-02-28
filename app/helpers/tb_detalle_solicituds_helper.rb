@@ -1,0 +1,2 @@
+module TbDetalleSolicitudsHelper
+end
