@@ -7,7 +7,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 center">
+                    <div class="col-md-12 col-sm-12 ">
                         <!--<img src="images/fondoreserva.png" class="img"/>-->
                         <div> 
                             <p class="lead">Reserva una consulta <strong>si es tu primera vez con nosotros.</strong></p>
@@ -15,6 +15,9 @@
                     </div>
                 </div>
             </div>
+
+      
+
 
             <div id="wrapper" >
                 <div class="wrapper wrapper-content animated fadeInRight">
@@ -74,27 +77,28 @@
                     <div class="form-group">
                       <label class="control-label">Referido Por</label>
                                    <select maxlength="150" name="servicio" class="form-control"> 
-                                        <option >Alguna de nuestras empresas internas</option>
-                                      <option >Convenio</option>
-                                        <option >Otros</option>
+                                        <% @referencias.each do |referencia| %>
+                                            <option value=""><%= referencia["descripcion"] %></option>
+                                        <% end %>
                                     </select>
                     </div></div>
                     <div class="col-md-6">
                     <div class="form-group">
                       <label class="control-label">Estado</label>
                                    <select maxlength="150" name="servicio" class="form-control"> 
-                                        <option >Lara</option>
-                                      <option >Carabobo</option>
-                                        <option >Yaritagua</option>
+                                        <% @estados.each do |estado| %>
+                                            <option value=""><%= estado["descripcion"] %></option>
+                                        <% end %>
                                     </select>
                     </div></div>
+
                     <div class="col-md-6">
                     <div class="form-group">
                       <label class="control-label">Ciudad</label>
                                    <select maxlength="150" name="servicio" class="form-control"> 
-                                        <option >Barquisimeto</option>
-                                      <option >Cabudare</option>
-                                        <option >La mora</option>
+                                         <% @ciudades.each do |ciudad| %>
+                                            <option value=""><%= ciudad["descripcion"] %></option>
+                                        <% end %>
                                     </select>
                     </div></div>
                     
@@ -147,11 +151,12 @@
                                                                 </select>
                                                             </div>
                                                             <div class="col-sm-6" >
-                                                                <select name="esteticista" class="form-control" disabled> 
-                                                                    <option >Seleccionar</option>
-                                                                    <option >Esteticista1</option>
-                                                                    <option >Esteticista2</option>
-                                                                    <option >Esteticista3</option>
+                                                                <select name="esteticista" class="form-control" > 
+                                                                    <% @esteticistas.each do |esteticista| %>
+                                                              <option value=""><%= esteticista["nombre"]%> 
+                                                               <%= esteticista["apellido"]%>
+                                                              </option>
+                                                                  <% end %>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -178,8 +183,14 @@
                 </div>
                    <div class="col-sm-12">
                        <form id="demoform" action="#" method="post">
-    <select multiple="multiple" size="10" name="duallistbox_demo1[]">
-      <option value="option1">Option 1</option>
+    <select multiple="multiple" size="20" name="duallistbox_demo1[]">
+
+           <% @servicios.each do |servicio| %>
+              <option value=""><%= servicio["descripcion"] %></option>
+            <% end %>
+
+
+     <!-- <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>
       <option value="option3" selected="selected">Option 3</option>
       <option value="option4">Option 4</option>
@@ -188,10 +199,10 @@
       <option value="option7">Option 7</option>
       <option value="option8">Option 8</option>
       <option value="option9">Option 9</option>
-      <option value="option0">Option 10</option>
+      <option value="option0">Option 10</option>-->
     </select>
     <br>
-    <button type="submit" class="btn btn-default btn-block">Aceptar</button>
+   
   </form>
 
 
@@ -220,7 +231,7 @@
                                         <option >no lo se solo lo encontre</option>
                                     </select>
                     </div></div>
-                     
+                     <!--
                     <div class="col-md-12">
                      <div class="form-group">
                       <label class="control-label">Que servicio Le gustaria realizarse en Spinetti Spa*</label>
@@ -232,7 +243,7 @@
                                         <option >Masajes</option>
                                     </select>
                     </div>
-                    </div>
+                    </div>-->
                           <div class="col-md-12">
                      <div class="form-group">
                       <label class="control-label">Esta Especialmente interesado en alguno de nuestros Servicios*</label>

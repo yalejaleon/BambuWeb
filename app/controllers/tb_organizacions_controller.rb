@@ -3,8 +3,9 @@ class TbOrganizacionsController < ApplicationController
 
   # GET /tb_organizacions
   # GET /tb_organizacions.json
-  def nosotros
-    @tb_organizacions = TbOrganizacion.all
+  def index
+    @tb_organizacions = HTTParty.get('http://192.168.0.107:8080/spa/organizacion',:headers =>{'Content-Type' => 'application/json'})
+     @tb_objetivos =HTTParty.get('http://192.168.0.107:8080/spa/objetivo',:headers =>{'Content-Type' => 'application/json'})
    # @tb_organizacions = HTTParty.get('http://localhost:3000/api/organizacion',:headers =>{'Content-Type' => 'application/json'})
 
   end

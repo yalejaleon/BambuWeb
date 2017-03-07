@@ -8,7 +8,6 @@
 }
 
 .bootstrap-duallistbox-container .info {
-  display: inline-block;
   margin-bottom: 5px;
   font-size: 11px;
 }
@@ -40,7 +39,7 @@
 
 .bootstrap-duallistbox-container .moveall,
 .bootstrap-duallistbox-container .removeall {
-  width: 40%;
+  width: 10%;
 }
 
 .bootstrap-duallistbox-container.bs2compatible .btn-group > .btn + .btn {
@@ -70,9 +69,4 @@
 .bootstrap-duallistbox-container.moveonselect .move,
 .bootstrap-duallistbox-container.moveonselect .remove {
   display:none;
-}
-
-.bootstrap-duallistbox-container.moveonselect .moveall,
-.bootstrap-duallistbox-container.moveonselect .removeall {
-  width: 100%;
 }

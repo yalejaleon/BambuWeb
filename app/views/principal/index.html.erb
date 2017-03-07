@@ -94,13 +94,13 @@
     </div>
   </div>
 
-  <!-- Left and right controls -->
+  <!-- Left and right controls 
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
 										<i class="material-icons">keyboard_arrow_left</i>
 									</a>
 									<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 										<i class="material-icons">keyboard_arrow_right</i>
-									</a>
+									</a>-->
 </div>
 
 <section class="section" style="height: 400px; background:#eef9d1; color: #a29c8f "> 
@@ -113,14 +113,15 @@
                     <h3 class="col-sm-8">Reserva Online</h3>
                
                 <p class="right col-sm-4">
-                    <a class="btn btn-success reserva" href="reserva.html" role="button">¡Reservación!</a>
+                <%= link_to '¡Reservación!', tb_clientes_path, class: "btn btn-success reserva" %>
+                   <!-- <a class="btn btn-success reserva" href="reserva.html" role="button">¡Reservación!</a>-->
                 </p>
                 </div>
         </div>
     </div>
    
     </section>
-	
+<!--	
 <br>
  <section>
  <div class="tim-typo">
@@ -144,40 +145,35 @@
 </div>
 </section>
 <hr>
+-->
 <br>
 <div class="row">
-						
-						<div class="col-md-7 col-sm-offset-1 ">
-	               <div class="scrollWrapper" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current">
-    							<div class="scrollTitle">Cartelera Informativa</div>
-    							<div id="scroll" >
- 
-       							 <div class="title">IMPORTANTE</div>
-      							  <div class="content">Por motivos de corte electrico, hoy no estaremos trabajando,las citas seran reprogramadas para el dia de mañana.
-       							 </div>
- 									 <small>12/04/2017</small>
-
-     							   <div class="title">AVISO</div>
-     							   <div class="content">Por decreto de locura del presidente, mañana no se estara laborando</a>
-     							   </div>
- 									    <small>12/04/2017</small>
-							
-       							 <div class="title">AVISO</div>
-       							 <div class="content">Solo se trabajara medio dia</a>
-       							 </div>
-      							  <small>12/04/2017</small>
+            
+            <div class="col-md-7 col-sm-offset-1 ">
+                 <div class="scrollWrapper" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current">
+                  <div class="scrollTitle">Cartelera Informativa</div>
+                  <div id="scroll" >
+                      
+                      <% @tb_noticia.each do |tb_noticium| %>
+                      
+                     <div class="title"><%= tb_noticium["Titulo"] %></div>
+                      <div class="content"><%= tb_noticium["contenido"]%></div>
+                   <small><%= tb_noticium["fecha"] %></small>
+                    
+                  <% end %>
                   </div>
-	               </div>
-	                    </div>
+                 </div>
+                      </div>
 
-						<div class="col-md-3 col-sm-offset-1 ">
-	                     <%= image_tag "teruel.png"%>
-							
-	                    </div>
+            <div class="col-md-3 col-sm-offset-1 ">
+                       <%= image_tag "teruel.png"%>
+              
+                      </div>
 
-	                    
-	                </div>
-	                </div>
+                      
+                  </div>
+                  </div>
+
 
 
     <%= render "/partials/footer" %>

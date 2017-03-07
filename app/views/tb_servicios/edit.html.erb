@@ -1,6 +1,14 @@
-<h1>Editing Tb Servicio</h1>
 
-<%= render 'form', tb_servicio: @tb_servicio %>
 
-<%= link_to 'Show', @tb_servicio %> |
-<%= link_to 'Back', tb_servicios_path %>
+<div class="item">
+                 <!-- <%= image_tag "services/china-ventosas.jpg"%>-->
+                 
+                 <img src="http://192.168.0.103:8080/Bambu-Web-Desktop/WebContent/assets/imagenesSlider/<%=@tb_service[0]["imagen"]%>" >
+                  <div class="carousel-caption pull-right">
+                  <h1> <p><%=@tb_service[0]["titulo"]%></p></h1>      
+                      <p><%=@tb_service[0]["descripcion"]%></p>
+                  </div>
+              </div>
+
+
+<%= render '/partials/footer' %>

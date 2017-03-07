@@ -1,0 +1,63 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--
+<table class="table">
+    <thead>
+        <tr>
+            <th>Paquete</th>
+            <th>Servicio</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @packages.each do |package| %>
+        <tr>
+            
+            <td><%=package["tipo_paquete"]%></td>
+            <td><%=package["titulo"]%></td>
+            <td><%=package["descripcion"]%></td>
+            <td><img src="http://192.168.0.103:8080/Bambu-Web-Desktop/WebContent/assets/imagenesSlider/<%=package["imagen"]%>" ></td>
+            <td class="td-actions text-right">
+                <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                    <i class="fa fa-user"></i>
+                </button>
+                <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                    <i class="fa fa-times"></i>
+                </button>
+            </td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+-->
+ <div class="row">
+
+ <% @packages.each do |package| %>
+ <div class="col-sm-4">
+<div class="card text-center">
+  <div class="card-header">
+    <%=package["tipo_paquete"]%>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title"><%=package["titulo"]%></h4>
+    <img style="height: 300px;width:300px" src="http://192.168.0.103:8080/Bambu-Web-Desktop/WebContent/assets/imagenesSlider/<%=package["imagen"]%>" >
+     <p class="card-text"><%=package["descripcion"]%></p>
+  </div>
+</div>
+</div>
+ <% end %>
+</div>
+
+<%= render '/partials/footer' %>
+
+

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :packages
   get 'nosotros/index'
 
   get 'paquetes/index'

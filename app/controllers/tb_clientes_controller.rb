@@ -4,7 +4,13 @@ class TbClientesController < ApplicationController
   # GET /tb_clientes
   # GET /tb_clientes.json
   def index
-    @tb_clientes = TbCliente.all
+    #@tb_clientes = HTTParty.get('http://192.168.0.100:8080/spa/referencias',:headers =>{'Content-Type' => 'application/json'})
+
+    @referencias=HTTParty.get('http://192.168.0.107:8080/spa/referencias',:headers =>{'Content-Type' => 'application/json'})
+    @estados=HTTParty.get('http://192.168.0.107:8080/spa/estados',:headers =>{'Content-Type' => 'application/json'})
+    @ciudades=HTTParty.get('http://192.168.0.107:8080/spa/ciudades',:headers =>{'Content-Type' => 'application/json'})
+    @servicios=HTTParty.get('http://192.168.0.107:8080/spa/servicios',:headers =>{'Content-Type' => 'application/json'})
+    @esteticistas=HTTParty.get('http://192.168.0.107:8080/spa/esteticistas',:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_clientes/1

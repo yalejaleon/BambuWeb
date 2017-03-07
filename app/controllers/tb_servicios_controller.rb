@@ -4,12 +4,13 @@ class TbServiciosController < ApplicationController
   # GET /tb_servicios
   # GET /tb_servicios.json
   def index
-    @tb_servicios = TbServicio.all
+    @tb_servicios = HTTParty.get('http://192.168.0.107:8080/spa/generales',:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_servicios/1
   # GET /tb_servicios/1.json
   def show
+    @tb_servicios = HTTParty.get('http://192.168.0.107:8080/spa/especificos/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_servicios/new
@@ -19,6 +20,7 @@ class TbServiciosController < ApplicationController
 
   # GET /tb_servicios/1/edit
   def edit
+     @tb_service = HTTParty.get('http://192.168.0.107:8080/spa/detalleServicio/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
   end
 
   # POST /tb_servicios
@@ -64,7 +66,7 @@ class TbServiciosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tb_servicio
-      @tb_servicio = TbServicio.find(params[:id])
+      @tb_servicio= params[:codigo]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
