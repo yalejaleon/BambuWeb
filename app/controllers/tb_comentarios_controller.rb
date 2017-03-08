@@ -4,7 +4,10 @@ class TbComentariosController < ApplicationController
   # GET /tb_comentarios
   # GET /tb_comentarios.json
   def index
-    @tb_comentarios = TbComentario.all
+    @estados=HTTParty.get('http://192.168.0.100:8080/spa/estados',:headers =>{'Content-Type' => 'application/json'})
+    @ciudades=HTTParty.get('http://192.168.0.100:8080/spa/ciudades',:headers =>{'Content-Type' => 'application/json'})
+    @tipo_preguntas=HTTParty.get('http://192.168.0.100:8080/spa/tipoPregunta',:headers =>{'Content-Type' => 'application/json'})
+    @tb_comentarios = HTTParty.get('http://192.168.0.100:8080/spa/tipoComentario',:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_comentarios/1

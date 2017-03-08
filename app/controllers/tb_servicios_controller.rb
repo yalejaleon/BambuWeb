@@ -4,13 +4,13 @@ class TbServiciosController < ApplicationController
   # GET /tb_servicios
   # GET /tb_servicios.json
   def index
-    @tb_servicios = HTTParty.get('http://192.168.0.107:8080/spa/generales',:headers =>{'Content-Type' => 'application/json'})
+    @tb_servicios = HTTParty.get('http://192.168.0.100:8080/spa/generales',:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_servicios/1
   # GET /tb_servicios/1.json
   def show
-    @tb_servicios = HTTParty.get('http://192.168.0.107:8080/spa/especificos/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
+    @tb_servicios = HTTParty.get('http://192.168.0.100:8080/spa/especificos/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /tb_servicios/new
@@ -20,7 +20,7 @@ class TbServiciosController < ApplicationController
 
   # GET /tb_servicios/1/edit
   def edit
-     @tb_service = HTTParty.get('http://192.168.0.107:8080/spa/detalleServicio/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
+     @tb_service = HTTParty.get('http://192.168.0.100:8080/spa/detalleServicio/'+@tb_servicio,:headers =>{'Content-Type' => 'application/json'})
   end
 
   # POST /tb_servicios

@@ -77,18 +77,18 @@
                     <div class="form-group">
                       <label class="control-label">Estado</label>
                                    <select maxlength="150" name="servicio" class="form-control"> 
-                                        <option >Lara</option>
-                                      <option >Carabobo</option>
-                                        <option >Yaritagua</option>
+                                        <% @estados.each do |estado| %>
+                                            <option value=""><%= estado["descripcion"] %></option>
+                                        <% end %>
                                     </select>
                     </div></div>
                     <div class="col-md-6">
                     <div class="form-group">
                       <label class="control-label">Ciudad</label>
-                                   <select maxlength="150" name="servicio" class="form-control"> 
-                                        <option >Barquisimeto</option>
-                                      <option >Cabudare</option>
-                                        <option >La mora</option>
+                                  <select maxlength="150" name="servicio" class="form-control"> 
+                                         <% @ciudades.each do |ciudad| %>
+                                            <option value=""><%= ciudad["descripcion"] %></option>
+                                        <% end %>
                                     </select>
                     </div></div>
                     
@@ -119,22 +119,21 @@
                         <div class="form-group">
                                             <label>Relacionado con</label>
                                             <select type="text" name="motivo" class="form-control" required>
-                                                <option>Servicio</option>
-                                                <option>Instalación</option>
-                                                <option>Atención</option>
-                                                <option>Organización</option>
+                                                 <% @tb_comentarios.each do |comentario| %>
+                                                  <option value=""> <%= comentario["descripcion"] %></option>
+                                                   
+                                                  <% end %>
                                             </select>
-                
+              
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                                             <label>Especialmente de</label>
                                             <select type="text" name="motivo" class="form-control" required>
-                                                <option>Sauna</option>
-                                                <option>Depilación</option>
-                                                <option>Cavitación</option>
-                                                <option>Limpieza Facial</option>
+                                                <% @tipo_preguntas.each do |pregunta| %>
+              <option value=""><%= pregunta["descripcion"] %></option>
+            <% end %>
                                             </select>
                 
                                         </div>

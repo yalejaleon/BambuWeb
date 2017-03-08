@@ -4,13 +4,13 @@ class PackagesController < ApplicationController
   # GET /packages
   # GET /packages.json
   def index
-    @packages = HTTParty.get('http://192.168.0.107:8080/spa/paquetes',:headers =>{'Content-Type' => 'application/json'})
+    @packages = HTTParty.get('http://192.168.0.100:8080/spa/paquetes',:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /packages/1
   # GET /packages/1.json
   def show
-     @packages= HTTParty.get('http://192.168.0.107:8080/spa/detallePaquete/'+@package,:headers =>{'Content-Type' => 'application/json'})
+     @packages= HTTParty.get('http://192.168.0.100:8080/spa/detallePaquete/'+@package,:headers =>{'Content-Type' => 'application/json'})
   end
 
   # GET /packages/new
